@@ -33,6 +33,44 @@ A comprehensive web application designed to manage workshops and collect partici
 
 ---
 
+
+## Screenshots
+
+### Workshop Home Page
+![Workshop Listing](assets/Screenshot%20(110).png)
+
+### Login Form
+![Feedback Form](assets/Screenshot%20(111).png)
+
+### Admin Panel
+![Admin Panel](assets/Screenshot%20(120).png)
+
+### FireStore Results View
+![Feedback Results](assets/Screenshot%20(127).png)
+
+### FireStore Results View
+![Feedback Results](assets/Screenshot%20(128).png)
+
+### Cloudinary Results View
+![Feedback Results](assets/Screenshot%20(132).png)
+
+### Student Dashboard View
+![Feedback Results](assets/Screenshot%20(112).png)
+
+### Feedback form View
+![Feedback Results](assets/Screenshot%20(115).png)
+
+### phone otp verification View
+![Feedback Results](assets/Screenshot%20(117).png)
+
+### Generate Certificate View and Certificate is also email to the user 
+![Feedback Results](assets/Screenshot%20(119).png)
+
+### Workshops Submissions View
+![Feedback Results](assets/Screenshot%20(123).png)
+
+
+
 ## Tech Stack
 
 | Layer            | Technology                         |
