@@ -13,7 +13,9 @@ const app = express();
 
 console.log(process.env.FRONTENDURL)
 app.use(cors({
-  origin: process.env.FRONTENDURL,
+  origin: [process.env.FRONTENDURL,
+            "https://aryan-workshop-feedback-system.netlify.app"
+  ],
   methods: ['GET', 'POST'],
   credentials: true,
 }));
