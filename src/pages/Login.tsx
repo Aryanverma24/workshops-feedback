@@ -4,7 +4,7 @@ import { auth, db } from '../lib/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaLock, FaUser, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaGraduationCap, FaLock, FaUser, FaEye, } from 'react-icons/fa';
 import type { FormEvent } from 'react';
 
 interface LoginProps {

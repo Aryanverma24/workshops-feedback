@@ -9,7 +9,6 @@ export default function Certificate() {
   const location = useLocation();
   const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState("");
 
     if (!location.state) {
         alert("No certificate data found. Redirecting to home.");
@@ -17,7 +16,7 @@ export default function Certificate() {
         return null;
     }
 
-  const { name, workshopName , collegeName, dateTime , email , phone , formId } = location.state || {};
+  const { name, workshopName , collegeName, dateTime , email , phone  } = location.state || {};
 
   const [certificateUrl, setCertificateUrl] = useState('');
 
@@ -159,6 +158,14 @@ useEffect(() => {
 
   return (
     <>
+
+    {loading && 
+    (
+      <>
+        <p>Still loading . This may have taken a few seconds</p>
+      </>
+    )
+    }
 
     {!certificateUrl && 
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4 text-center">

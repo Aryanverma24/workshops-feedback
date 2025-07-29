@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { collection, getDocs,doc, query, where, orderBy, limit, getDoc } from "firebase/firestore";
+import { collection, getDocs,doc, query, where,  getDoc } from "firebase/firestore";
 import { db, auth } from "../lib/firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { FiLoader, FiAlertCircle, FiCheckCircle, FiMessageSquare, FiLogOut } from "react-icons/fi";

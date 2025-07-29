@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiChevronDown, FiChevronUp, FiDownload, FiEye } from "react-icons/fi";
+import { FiChevronDown, FiDownload, FiEye } from "react-icons/fi";
 
 export default function WorkshopSubmissionsView() {
   type Workshop = { id: string; workshopName?: string; collegeName?: string; [key: string]: any };

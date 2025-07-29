@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { db } from '../lib/firebase';
 import { getDocs, orderBy, query, collection } from 'firebase/firestore';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -128,7 +128,7 @@ const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
         ) : (
           <div className="space-y-4">
             <AnimatePresence>
-              {feedbacks.map((fb, index) => (
+              {feedbacks.map((fb, _index) => (
                 <motion.div
                   key={fb.id}
                   variants={feedbackVariants}

@@ -213,7 +213,7 @@ export default function StudentForm() {
   };
 
   if (!workshop) return <p className="p-4 text-center">Loading workshop details...</p>;
-
+  if(confirmationResult) return <> <p> This is confirmation Result</p></>
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-100 via-white to-blue-100 flex items-center justify-center px-4 py-10">
       <form

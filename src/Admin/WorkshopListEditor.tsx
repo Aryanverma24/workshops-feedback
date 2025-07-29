@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { collection, getDocs, doc, updateDoc } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiEdit2, FiCheck, FiX, FiLoader, FiEye, FiEyeOff } from "react-icons/fi";
+import { FiEdit2, FiLoader, FiEye, FiEyeOff } from "react-icons/fi";
 
 type Workshop = {
   id: string;
@@ -12,19 +12,7 @@ type Workshop = {
   formActive: boolean;
 };
 
-const colorScheme = {
-  primary: '#4F46E5',
-  secondary: '#6366F1',
-  success: '#10B981',
-  error: '#EF4444',
-  background: '#F8FAFC',
-  surface: '#FFFFFF',
-  text: '#1F2937',
-  textSecondary: '#6B7280',
-  border: '#E5E7EB',
-  hover: '#F3F4F6',
-};
-
+// 
 export default function WorkshopListEditor() {
   const [workshops, setWorkshops] = useState<Workshop[]>([]);
   const [editMode, setEditMode] = useState<string | null>(null);

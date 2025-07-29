@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FiArrowRight, FiArrowLeft, FiLogOut } from "react-icons/fi";
+import { FiLogOut } from "react-icons/fi";
 import { db } from "../lib/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { signOut } from "firebase/auth";
