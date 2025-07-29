@@ -33,7 +33,7 @@ const Twillo_PHONE = process.env.TWILLO_PHONE
 const client = twilio(AccountSID,AUTHTOKEN);
 
 let otpStore = {};
-app.post('/send-otp', async (req,res)=>{
+app.post('/api/send-otp', async (req,res)=>{
     console.log('inside')
     const {phone} = req.body;
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
@@ -56,7 +56,7 @@ app.post('/send-otp', async (req,res)=>{
     }
 })
 
-app.post('/verify-otp',(req,res)=>{
+app.post('/api/verify-otp',(req,res)=>{
     const {phone,otp}=req.body;
     console.log('inside verify otp')
     if(!phone || !otp){
@@ -87,7 +87,7 @@ const transport = nodemailer.createTransport({
     }
 })
 
-app.post('/send-email-otp',async (req,res)=>{
+app.post('/api/send-email-otp',async (req,res)=>{
     const {email} = req.body;
     const otp = Math.floor(100000 + Math.random()*900000).toString();
     try {
@@ -110,7 +110,7 @@ app.post('/send-email-otp',async (req,res)=>{
     }
 })
 
-app.post('/verify-email-otp',(req,res)=>{
+app.post('/api/verify-email-otp',(req,res)=>{
     const {email,otp}= req.body;
     if(!email || !otp){
         return res.status(400).json({error: "Email and Otp are required"});
@@ -124,7 +124,7 @@ app.post('/verify-email-otp',(req,res)=>{
 })
 
 
-app.post('/send-certificate-to-email', async(req,res)=>{
+app.post('/api/send-certificate-to-email', async(req,res)=>{
 
     const {email,certificateUrl,workshopName,name} = req.body;
     if(!email || !certificateUrl){
