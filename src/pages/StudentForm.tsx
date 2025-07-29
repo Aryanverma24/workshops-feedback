@@ -96,7 +96,7 @@ export default function StudentForm() {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:5000/send-otp", {
+      const response = await axios.post("https://workshops-feedback.vercel.app/send-otp", {
         phone: "+91" + phone,
       });
       setConfirmationResult(response.data);
@@ -109,7 +109,7 @@ export default function StudentForm() {
 
   const handleVerifyOTP = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/verify-otp", {
+      const response = await axios.post("https://workshops-feedback.vercel.app/verify-otp", {
         phone: "+91" + phone,
         otp: otp,
       });
@@ -131,7 +131,7 @@ export default function StudentForm() {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5000/send-email-otp", {
+      const res = await axios.post("https://workshops-feedback.vercel.app/send-email-otp", {
         email,
       });
       setEmailOtp(res.data.otp);
@@ -149,7 +149,7 @@ export default function StudentForm() {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5000/verify-email-otp", {
+      const res = await axios.post("https://workshops-feedback.vercel.app/verify-email-otp", {
         email,
         otp: emailOtp,
       });
