@@ -15,7 +15,6 @@ console.log(process.env.FRONTENDURL)
 app.use(cors({
   origin: [
             "https://aryan-workshop-feedback-system.netlify.app",
-            process.env.FRONTENDURL,
   ],
   methods: ['GET', 'POST'],
   credentials: true,
