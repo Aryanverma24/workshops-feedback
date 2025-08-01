@@ -153,9 +153,9 @@ app.post('/api/send-certificate-to-email', async(req,res)=>{
 })
 
 
-app.listen(PORT,()=>{
-    console.log(`server is running on PORT ${PORT}`);
-})
+// app.listen(PORT,()=>{
+//     console.log(`server is running on PORT ${PORT}`);
+// })
 
-
+export default app;
 
