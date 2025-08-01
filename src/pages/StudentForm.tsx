@@ -139,7 +139,8 @@ export default function StudentForm() {
       setEmailVerified(false);
     } catch (error) {
       console.log(error);
-      alert("Failed to send email OTP. Please try again.");
+      alert("Failed to send email OTP. Please try again. ");
+      alert(error)
     }
   };
 
