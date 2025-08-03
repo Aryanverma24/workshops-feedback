@@ -24,7 +24,7 @@ export default function Certificate() {
   
 const sendEmailCertificate= async()=>{
     try{
-        const response = await axios.post('https://workshops-feedback.vercel.app/api/send-certificate-to-email',{
+        const response = await axios.post('https://workshops-feedback.onrender.com/api/send-certificate-to-email',{
             email: email,
             certificateUrl: certificateUrl,
             workshopName : workshopName,
@@ -54,7 +54,7 @@ const sendEmailCertificate= async()=>{
         const fetchCertificate = async () => {
         try {
             // Replace with actual API call to fetch certificate URL
-            const url = await axios.post(`http://localhost:5000/generate-certificate`, {             
+            const url = await axios.post(`https://workshops-feedback.onrender.com/generate-certificate`, {             
                     name : name,
                     workshopName : workshopName,                       
                     provider: collegeName ,

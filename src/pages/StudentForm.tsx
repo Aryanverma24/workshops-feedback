@@ -96,7 +96,7 @@ export default function StudentForm() {
       return;
     }
     try {
-      const response = await axios.post("https://workshops-feedback.vercel.app/api/send-otp", {
+      const response = await axios.post("https://workshops-feedback.onrender.com/api/send-otp", {
         phone: "+91" + phone,
       });
       setConfirmationResult(response.data);
@@ -109,7 +109,7 @@ export default function StudentForm() {
 
   const handleVerifyOTP = async () => {
     try {
-      const response = await axios.post("https://workshops-feedback.vercel.app/api/verify-otp", {
+      const response = await axios.post("https://workshops-feedback.onrender.com/api/verify-otp", {
         phone: "+91" + phone,
         otp: otp,
       });
@@ -131,11 +131,11 @@ export default function StudentForm() {
       return;
     }
     try {
-      const res = await axios.post("https://workshops-feedback.vercel.app/api/send-email-otp", {
+      const res = await axios.post("https://workshops-feedback.onrender.com/api/send-email-otp", {
         email,
       });
       setEmailOtp(res.data.otp);
-      alert(`Email OTP sent to ${email}. Please check your inbox.`);
+      alert(`Email OTP sent to ${email}. Please check your inbox.`)
       setEmailVerified(false);
     } catch (error) {
       console.log(error);
@@ -150,7 +150,7 @@ export default function StudentForm() {
       return;
     }
     try {
-      const res = await axios.post("https://workshops-feedback.vercel.app/api/verify-email-otp", {
+      const res = await axios.post("https://workshops-feedback.onrender.com/api/verify-email-otp", {
         email,
         otp: emailOtp,
       });
