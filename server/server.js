@@ -13,10 +13,7 @@ const app = express();
 
 console.log(process.env.FRONTENDURL)
 app.use(cors({
- origin: [
-  "http://localhost:5173",
-  "https://aryan-workshop-feedback-system.netlify.app"
-],
+  origin: process.env.FRONTENDURL | "*",
   methods: ['GET', 'POST'],
   credentials: true,
 }));
@@ -153,9 +150,9 @@ app.post('/api/send-certificate-to-email', async(req,res)=>{
 })
 
 
-// app.listen(PORT,()=>{
-//     console.log(`server is running on PORT ${PORT}`);
-// })
+app.listen(PORT,()=>{
+    console.log(`server is running on PORT ${PORT}`);
+})
 
-export default app;
+
 
