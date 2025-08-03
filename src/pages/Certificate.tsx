@@ -122,20 +122,19 @@ const addUrlToSubmission = async () => {
   try {
     const q = query(
       collection(db, "submissions"),
-      where("email", "==", email),// Make sure this matches exactly with Firestore field
+      where("email", "==", email),
+      where("course", "==", workshopName) // make sure this field name matches your submissions
     );
 
-    console.log(q)
-    
     const snapshot = await getDocs(q);
-    console.log(snapshot)
 
     if (snapshot.empty) {
-      console.warn("❌ No matching submission found.");
+      console.warn("❌ No matching submission found for email and workshop.");
       return;
     }
 
-    // Assuming only one submission per user per workshop
+    console.log(`Found ${snapshot.docs.length} submissions`);
+
     const docRef = snapshot.docs[0].ref;
 
     await setDoc(docRef, { certificateUrl }, { merge: true });
